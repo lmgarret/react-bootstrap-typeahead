@@ -27,6 +27,7 @@ function inputContainer(Input) {
         onFocus,
         onKeyDown,
         onRemove,
+        onRootClose,
         onTokenClick,
         placeholder,
         renderToken,
@@ -54,6 +55,7 @@ function inputContainer(Input) {
         onClick: onFocus,
         onFocus,
         onKeyDown,
+        onRootClose,
         onTokenClick,
         placeholder: selected.length ? null : placeholder,
         // Comboboxes are single-select by definition:

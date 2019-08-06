@@ -22,6 +22,7 @@ class TypeaheadInputMulti extends React.Component {
       onRemove,
       renderToken,
       selected,
+      onRootClose,
       onTokenClick,
       ...props
     } = this.props;

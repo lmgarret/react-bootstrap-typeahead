@@ -6,7 +6,9 @@ import inputContainer from './containers/inputContainer';
 
 class TypeaheadInputSingle extends React.Component {
   render() {
-    const {className, inputRef, onTokenClick, ...props} = this.props;
+    const {
+      className, inputRef, onRootClose, onTokenClick, ...props
+    } = this.props;
 
     return (
       <input

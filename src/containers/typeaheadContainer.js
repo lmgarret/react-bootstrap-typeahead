@@ -424,6 +424,10 @@ function typeaheadContainer(Component) {
     }
 
     _handleRootClose = (e) => {
+      if (this.props.onRootClose) {
+        this.props.onRootClose();
+      }
+
       if (isBodyMenuClick(e, this.props) || !this.state.showMenu) {
         return;
       }
@@ -645,6 +649,10 @@ function typeaheadContainer(Component) {
      * Invoked when the pagination menu item is clicked. Receives an event.
      */
     onPaginate: PropTypes.func,
+    /**
+     * Invoked whenever the user focuses/clicks outside the typeahead.
+     */
+    onRootClose: PropTypes.func,
     /**
      * Invoked whenever a token is clicked. Receives an option.
      */
