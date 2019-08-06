@@ -7,6 +7,7 @@ import InputSizeExample from '../examples/InputSizeExample.react';
 import MenuAlignExample from '../examples/MenuAlignExample.react';
 import PaginationExample from '../examples/PaginationExample.react';
 import SelectionsExample from '../examples/SelectionsExample.react';
+import ClickableExample from '../examples/ClickableExample.react';
 
 /* eslint-disable import/no-unresolved */
 import BasicBehaviorsExampleCode from '!raw-loader!../examples/BasicBehaviorsExample.react';
@@ -16,6 +17,7 @@ import InputSizeExampleCode from '!raw-loader!../examples/InputSizeExample.react
 import MenuAlignExampleCode from '!raw-loader!../examples/MenuAlignExample.react';
 import PaginationExampleCode from '!raw-loader!../examples/PaginationExample.react';
 import SelectionsExampleCode from '!raw-loader!../examples/SelectionsExample.react';
+import ClickableExampleCode from '!raw-loader!../examples/ClickableExample.react';
 /* eslint-enable import/no-unresolved */
 
 import ExampleSection from '../components/ExampleSection.react';
@@ -44,6 +46,14 @@ const BehaviorsSection = (props) => (
     </Markdown>
     <ExampleSection code={SelectionsExampleCode}>
       <SelectionsExample />
+    </ExampleSection>
+    <Title>Clickable tokens</Title>
+    <Markdown>
+      You can create clickable tokens and react to click events.
+      This requires to create custom tokens.
+    </Markdown>
+    <ExampleSection code={ClickableExampleCode}>
+      <ClickableExample />
     </ExampleSection>
     <Title>Input Size</Title>
     <Markdown>
