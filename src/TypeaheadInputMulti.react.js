@@ -22,6 +22,7 @@ class TypeaheadInputMulti extends React.Component {
       onRemove,
       renderToken,
       selected,
+      onTokenClick,
       ...props
     } = this.props;
 
@@ -128,6 +129,8 @@ TypeaheadInputMulti.defaultProps = {
       disabled={props.disabled}
       key={idx}
       onRemove={props.onRemove}
+      onTokenClick={
+        props.onTokenClick ? () => props.onTokenClick(option) : undefined}
       tabIndex={props.tabIndex}>
       {getOptionLabel(option, props.labelKey)}
     </Token>

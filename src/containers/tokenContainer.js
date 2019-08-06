@@ -15,13 +15,14 @@ const tokenContainer = (Component) => {
     };
 
     render() {
+      const {onTokenClick, ...props} = this.props;
       return (
         <RootCloseWrapper onRootClose={this._handleBlur}>
           <Component
-            {...this.props}
+            {...props}
             {...this.state}
             onBlur={this._handleBlur}
-            onClick={this._handleActive}
+            onClick={this._handleClick}
             onFocus={this._handleActive}
             onKeyDown={this._handleKeyDown}
           />
@@ -51,6 +52,14 @@ const tokenContainer = (Component) => {
     _handleActive = (e) => {
       e.stopPropagation();
       this.setState({active: true});
+    }
+
+    _handleClick = (e) => {
+      e.stopPropagation();
+      this.setState({active: true});
+      if (this.props.onTokenClick) {
+        this.props.onTokenClick();
+      }
     }
   }
 
